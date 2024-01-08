@@ -1,0 +1,23 @@
+// DM Environment file for ExoticDepths.dme.
+// All manual changes should be made outside the BEGIN_ and END_ blocks.
+// New source code should be placed in .dm files: choose File/New --> Code File.
+
+// BEGIN_INTERNALS
+// END_INTERNALS
+
+// BEGIN_FILE_DIR
+#define FILE_DIR .
+#define FILE_DIR "icons"
+// END_FILE_DIR
+
+// BEGIN_PREFERENCES
+// END_PREFERENCES
+
+// BEGIN_INCLUDE
+#include "code\__DEFINES\direction.dm"
+#include "code\__HELPERS\direction.dm"
+#include "code\game\mob.dm"
+#include "code\game\world.dm"
+#include "maps\test.dmm"
+// END_INCLUDE
+
