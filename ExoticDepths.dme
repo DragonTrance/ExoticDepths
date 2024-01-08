@@ -18,6 +18,7 @@
 #include "code\__HELPERS\direction.dm"
 #include "code\game\mob.dm"
 #include "code\game\world.dm"
-#include "maps\test.dmm"
+#include "code\game\turf\turf.dm"
+#include "maps\station.dmm"
 // END_INCLUDE
 

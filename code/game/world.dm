@@ -1,7 +1,7 @@
 
 
 /world
-	fps = 12        // Update rate of the server
+	fps = 60        // Update rate of the server
 	icon_size = 64  // Every icon in this game is 64x64
 
 	view = "8x8"    //Because of how ISOMETRIC_MAP works, this will always be widescreen proportions
@@ -17,10 +17,3 @@
 	step_size = 16
 
 /obj/player_start
-
-/turf
-	icon = 'icons/tiles.dmi'
-
-/turf/wall
-	icon_state = "wall"
-	density = TRUE
