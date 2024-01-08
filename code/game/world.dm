@@ -22,9 +22,6 @@
 			C.keyLoop()
 		sleep(tick_lag)
 
-/obj
-	step_size = 16
-
 /obj/player_start
 
 
