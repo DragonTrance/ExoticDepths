@@ -15,10 +15,13 @@
 
 // BEGIN_INCLUDE
 #include "code\__DEFINES\direction.dm"
+#include "code\__DEFINES\globals.dm"
 #include "code\__HELPERS\direction.dm"
+#include "code\game\client.dm"
 #include "code\game\mob.dm"
 #include "code\game\world.dm"
 #include "code\game\turf\turf.dm"
 #include "maps\station.dmm"
+#include "skin\interface.dmf"
 // END_INCLUDE
 

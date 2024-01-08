@@ -1,7 +1,7 @@
 
 
 /world
-	fps = 60        // Update rate of the server
+	fps = 12        // Update rate of the server
 	icon_size = 64  // Every icon in this game is 64x64
 
 	view = "8x8"    //Because of how ISOMETRIC_MAP works, this will always be widescreen proportions
@@ -13,7 +13,24 @@
 //However, your client will crash if the facing direction is bicardinal (like facing northeast)
 //I'm not sure how I'm going to fight this just yet, it'd probably be dumb as hell but I would really enjoy it if it worked
 
+/world/New()
+	. = ..()
+	while(TRUE)
+		for(var/i in 1 to length(g_AllClients))
+			var/k = g_AllClients[i]
+			var/client/C = g_AllClients[k]
+			C.keyLoop()
+		sleep(tick_lag)
+
 /obj
 	step_size = 16
 
 /obj/player_start
+
+
+/datum/proc/keyDown(key, client/C)
+/datum/proc/keyUp(key, client/C)
+
+/datum/proc/keyLoop(client/C)
+	set waitfor = FALSE
+	return

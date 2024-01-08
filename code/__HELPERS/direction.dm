@@ -1,5 +1,5 @@
 //Accepts an integer as input and returns a text version based on direction flags
-proc/DirectionToString(direction)
+/proc/DirectionToString(direction)
 	var/name = ""
 
 	if(direction & SOUTH) name += "SOUTH"
@@ -10,7 +10,7 @@ proc/DirectionToString(direction)
 
 	return name
 
-proc/GetClockwiseDirection(starting_direction, use_flags)
+/proc/GetClockwiseDirection(starting_direction, use_flags)
 	var/list/directions
 	if((use_flags & CF_CARDINALS) && (use_flags & CF_BICARDINALS))
 		directions = g_all_clockwise_dirs
@@ -37,7 +37,7 @@ proc/GetClockwiseDirection(starting_direction, use_flags)
 
 	return directions[index]
 
-proc/GetOppositeDirection(dir)
+/proc/GetOppositeDirection(dir)
 	var/new_dir = 0
 	if(dir & SOUTH) new_dir = NORTH
 	else if(dir & NORTH) new_dir = SOUTH
@@ -45,3 +45,25 @@ proc/GetOppositeDirection(dir)
 	else if(dir & EAST) new_dir |= WEST
 	world << DirectionToString(new_dir)
 	return new_dir
+
+//returns the north-zero clockwise angle in degrees, given a direction
+/proc/dir2angle(D)
+	switch(D)
+		if(NORTH)
+			return 0
+		if(SOUTH)
+			return 180
+		if(EAST)
+			return 90
+		if(WEST)
+			return 270
+		if(NORTHEAST)
+			return 45
+		if(SOUTHEAST)
+			return 135
+		if(NORTHWEST)
+			return 315
+		if(SOUTHWEST)
+			return 225
+		else
+			return null

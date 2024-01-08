@@ -1,21 +1,19 @@
-
 /turf
 	icon = 'icons/tiles.dmi'
-	icon_state = "space"
-
-/turf/debug
-	icon_state = "wall"
-	density = TRUE
 
 /turf/floor
 	icon_state = "plating"
 
 /turf/wall
 	icon_state = "r-wall"
-	density = TRUE
 
 /turf/wall/window
-	icon_state = "wall-window-b"
+	icon = 'icons/wall_window.dmi'
+	icon_state = "east_west"
 
-/turf/openspace
-	icon_state = "space"
+/turf/wall/window/New()
+	. = ..()
+	overlays += image('icons/wall_window.dmi', icon_state = icon_state + "-o")
+
+/turf/wall/window/two
+	icon_state = "north_south"
