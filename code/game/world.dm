@@ -1,8 +1,8 @@
 
 
 /world
-	fps = 12        // Update rate of the server
-	icon_size = 64  // Every icon in this game is 64x64
+	fps = 60        // Update rate of the server
+	icon_size = 64  // Every tile is 64x64,and sprites will be scaled accordingly
 
 	view = "8x8"    //Because of how ISOMETRIC_MAP works, this will always be widescreen proportions
 	map_format = ISOMETRIC_MAP //yeah we gay keep scrollin
@@ -21,13 +21,3 @@
 			var/client/C = g_AllClients[k]
 			C.keyLoop()
 		sleep(tick_lag)
-
-/obj/player_start
-
-
-/datum/proc/keyDown(key, client/C)
-/datum/proc/keyUp(key, client/C)
-
-/datum/proc/keyLoop(client/C)
-	set waitfor = FALSE
-	return

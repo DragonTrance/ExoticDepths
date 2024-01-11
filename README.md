@@ -1,5 +1,5 @@
 # ExoticDepths
-An isometric-styled Space Station 13 codebase for BYOND, oriented around HRP and ERP gameplay, adding to more of the vast servers you can already find.
+An isometric-styled Space Station 13 codebase for BYOND, created for a unique MRP/HRP experience.
 
 I am nowhere near to even hosting a server with this code, since I'm starting from the bottom and building onto the code as I continue
 
